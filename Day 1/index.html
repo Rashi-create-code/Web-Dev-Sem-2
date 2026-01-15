@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // a=10;
+        // console.log(a);
+        // var a;
+        // Hoisting-> the variable declaration and function declaration will move to the top of the scope 
+        // hoisting will applicabale for var variable only
+        // in let, const hoisting won't be applicable  -> will be getting reference error
+
+        // TDZ (Temperal Dead Zone) -> when we declare a variable with let and const without its proper initialisation then the variable lies in temperal dead zonee until its proper initialisation
+        // a=10; //tdz
+        // console.log(a);
+        // let a;
+
+        // Q1. Take an array with length 10 and keep 10 diff student marks in between 0 to 40 and check which student marks is passed or failed
+        let mark= [35,34,32,24,29,30,39,14,12,16];
+        let result= mark.filter(function(x)
+    {
+        if (x>=16){
+            console.log(x,"pass")
+        }
+        else {
+            console.log(x,"fail")
+        }
+    });
+    /*
+    let mark= [35,34,32,24,29,30,39,14,12,16];
+        let result= mark.filter((x)=>   //arrow function
+    {
+        if (x>=16){
+            console.log(x,"pass")
+        }
+        else {
+            console.log(x,"fail")
+        }
+    });*/
+        console.log(result);
+
+        // Q2. find the sum of all the elements inside an array with for loop
+        let num=[1,2,3,4,5];
+        let sum=0;
+        for (let i=0; i<num.length; i++){
+            sum+= num[i];
+        }
+        console.log(sum);
+
+        // Reduce method
+        let a=[1,2,3,4,5]
+        let s=0;
+        let add= a.reduce((acc,current)=> acc+ current )
+        console.log(add)
+        
+        
+    </script>
+</body>
+</html>
+<!-- js is both compiler and interpreter  
+ compiler is call stack -->
