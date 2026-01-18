@@ -1,4 +1,4 @@
-##JS DAY4 
+##JS DAY 4 
 
 console.log([]+{}) gives [object Object]
 as abjest is datatype and Object is a constructor
@@ -195,3 +195,6 @@ true
 🔍 Reason
 [] → ""
 "" == "" → true
+
+
+Reasons of some tricky questions
