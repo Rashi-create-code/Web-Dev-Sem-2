@@ -1,3 +1,5 @@
+##JS DAY4 
+
 console.log([]+{}) gives [object Object]
 as abjest is datatype and Object is a constructor
 where as it print this because it converts into a string conacatenation bcz of '+'
