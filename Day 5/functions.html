@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fruits = ["apple","banana","lichi"];
+
+        let newlength = fruits.push("cherry"); //3 -> it returns the length of an array
+        console.log(fruits);
+        console.log(newlength);
+
+
+        let fruit = ["apple","banana","cherry"];
+        let remove = fruit.pop(); //"cherry" -> it returns the end value of an array
+
+        //shift gives each element from starting
+
+        //reverse an array using push and pop
+        let num = [1,2,3];
+        let reverse = [];
+        while (num.length>0){
+            reverse.push(num.pop());
+        }
+        console.log(reverse)
+
+        //remove all negative numbers using these methods
+        let num2 = [1,2,-5,7,-8,-2];
+        let pos =[];
+        while(num2.length>0){
+            let posnum = num2.shift()
+            if (posnum>0){
+                pos.push(posnum);
+            }
+        }
+        console.log(pos)
+
+
+        //check one array is a palindrome or not
+
+        function palindrome() {
+        let seq=[1,2,3,3,2,1];
+        // let pal =[];
+        // while(seq.length>0){
+        //     pal.push(seq.pop());
+        //     if (pal.pop() == seq.pop()){
+        //         console.log(pal);
+        //     }
+        // }
+        // console.log(pal);
+        //array and object are two elements that need loops to iterate
+        let original =[];
+        let rev = [];
+        for (let i=0; i<seq.length; i++){
+            original.push(seq[i]);
+        }
+        while (seq.length>0){
+            rev.push(seq.pop())
+        }
+
+        for(i=0;i<original.length;i++){
+            if (original[i] != rev[i]){
+                return "not a palindrome"
+            }
+        }
+        return "palindrome"
+    }
+    console.log(palindrome())
+        
+// return always returns once but console.log can returns many time
+
+
+    // Q4. remove all the duplicate elements from the array 
+    // Q5. split even and odd numbers from a given array
+    // Q6. move all zeros to the end of the array [2,0,3,0,4,0,6,0] ->> [2,3,4,6,0,0,0,0]
+    // using push, pop, shift, unshift
+
+    </script>
+</body>
+</html>
