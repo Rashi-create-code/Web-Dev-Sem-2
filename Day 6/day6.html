@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sentence = "I am a comma seperated sentence"
+        let word = sentence.split("a")
+        console.log(word)
+        console.log(sentence.length)
+
+        //Q1. find out the occurence of r in the given string
+        let str = "tu meri me tera me teri tu mera"
+        let word2 = str.split("r")
+        console.log(word2)
+        console.log(word2.length - 1)
+
+        //Types of functions
+    /*   1.) Regular Function  Synchronus
+         2.) Arrow Function    Asynchronous   Good practise for this function is const (bcz integer won't be changed)
+         3.) Call Back Function  Asynchronous
+         4.) Anonymous Function   Synchronous
+         5.) First Class Function   Asynchronous
+         6.) Higher Order Function  Asynchronous
+         7.) Self Invoking Function (IIFE)  Synchronous
+
+         Two types of functions 
+         Synchronus ->JS is synchronus (we move to another task after finishing first task execution)
+         Almost everything in JS is an object
+
+         Asynchronus -> we move to another task even before finishing the first task
+
+
+        */
+       //regular function
+    //    Synchronous function : we can move 
+       function demo(){   
+        console.log("hii")
+       }
+       demo()
+
+       function sample(a,b){
+        return a+b;
+       }
+       console.log(sample(5,10))
+
+    //    Arrow Function
+    // advantage : doesn't need return and function keyword and it will perform asynchronousy.
+    // const test = (c,d) => c+d;    -> if it is not multiple line we can write like this
+    const test = (c,d) => {
+        return c+d;
+    }
+    console.log(test(4,5))
+
+    // Anonymous Function 
+    let arr = [1,2,3,4,5]
+    let res = arr.map((x)=>{ //here (x) -> is an anonymous func
+        return x+2
+    })
+    console.log(res)
+
+    // setTimeout(callback,timedelay);
+    
+    setTimeout(()=>{
+        alert("please sign in")
+    },5000)
+
+    setInterval(()=>{
+        console.log("sign up")
+    },1000)
+
+    let date = new Date();
+    console.log(date)
+
+
+    // Callback function
+
+
+
+    // self invoking function
+    (function(){
+        console.log("demo");
+    }) ();
+
+    </script>
+</body>
+</html>
