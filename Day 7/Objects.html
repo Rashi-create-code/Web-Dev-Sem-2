@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user={
+            Fullname: "Rashi",
+            age: 18,
+            address: "Rohtak",
+            mobileno: 1234678955,
+            favcolor: ["blue","white"]  //it is a list component it will come before no.
+        }
+        // We can access the individual value by targeting key with variable name
+        console.log(user.Fullname, user.mobileno, user.favcolor[1])
+
+
+        //there are two types of keywords in object ->new Object() and this Object()
+
+        let date = new Date()
+        console.log(date)
+
+        setInterval //iska use krke hum clock bna skte hai
+
+        // bracket notation -> another way to access an object
+        // key in any object is always in a string 
+        console.log(user["Fullname"]) //this is a bracket notation
+    </script>
+</body>
+</html>
+<!-- Primitive datatype:-
+ string, boolean, null, undefined
+ Non-Primitive Datatype:-
+ functions,array, object -->
+
+ <!-- Why do we use objects?
+          to group related data
+          code clean, neat and organised
+          to reuse structure
+          make working with data easier and more meaningful
+          to avoid too many seperate variables -->
