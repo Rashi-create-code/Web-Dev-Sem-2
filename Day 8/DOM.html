@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myheading">Hello world</h1>
+
+    <div id="content">
+        <h2>hii para</h2>
+        <p>hwfgegbsjfgrebcdbaslfyygewcbmdcbwchefb hvef h ebhjefewfhb</p>
+    </div>
+
+    <script>
+        // DOM (Document Object Model)
+        /*mainly everything in this is considered as an abject
+        hamburger menu -> jo phn m teen line aati hai jisme menu contact and all ata hai 
+        instagram k followers or google p apna naam likhna and photo dalna is done by dom voh access le leta hai and change kr skta hai
+        */
+        // some common built-in methods
+        //1)getElementById(id)
+        const headingElement = document.getElementById('myheading');
+        console.log(headingElement);
+        headingElement.textContent="New Heading";
+        headingElement.style.color="blue";
+        headingElement.style.backgroundColor="yellow";
+
+        //2)getElementByTagName(tag)
+        //3)getElementsByClassName(name)
+        // 4)querySelector()
+        const para= document.querySelector("#content p")   //here descendent selector is also used content p
+        console.log(para);
+        para.style.color="orange";
+        // in query selector we need to use sign as # for id , . for class but not in 2) and 3)
+
+    </script>
+</body>
+</html>
+<!-- callstack - it is a process and mechanism which keep tracks of every process running in the background or javascript codes.
+ it stores global execution context and function execution context .
+ after the processing of code it will pop out the FEC (functional execution context) and then GEC at the end. -->
+ <!-- static sites -> which users can't contact
+  dynamic sites -> which users can contact -->
+  <!-- Api is an interface
+   DOM is a programming interface for web documents -->
+
+   <!-- create read update delete -> crud operation -->
