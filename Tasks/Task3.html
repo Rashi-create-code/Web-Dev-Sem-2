@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Paragraph One</p>
+    <p>Paragraph Two</p>
+    <p>Paragraph Three</p>
+    <p>Paragraph Four</p>
+    <p>Paragraph Five</p>
+    <p>Paragraph Six</p>
+
+    <script>
+        const task3=document.getElementsByTagName("p");
+        console.log(task3);
+        for(let i=0;i<task3.length;i++){
+            console.log(task3[i]);
+            if(i%2===0){
+                task3[i].style.color="blue";
+            }
+            else{
+                task3[i].style.color= "green";
+            }        
+        }
+        task3[task3.length-1].style.fontWeight="bold";
+    </script>
+
+</body>
+</html>

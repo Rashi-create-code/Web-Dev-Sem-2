@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="content">
+        <h2>Article</h2>
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+    </section>
+
+    <script>
+        // const section= document.getElementById("content");  
+        // const task5= section.getElementsByTagName("p");
+        // we can use this also in place of below line
+        
+        const task5= document.querySelectorAll("#content p");
+        for(let i=0;i<task5.length;i++){
+            task5[i].style.color="purple";
+        }
+    </script>
+</body>
+</html>

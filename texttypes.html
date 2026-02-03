@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+    .textContent
+    .innerText
+    .innerHTML
+     -->
+    <h1>jdfjh</h1>
+    <section id="content" style="display: none">
+        <h2>Article</h2>
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+    </section>
+
+    <div id="guest">
+        welcome
+        <span style="display:none">Guest</span>
+    </div>
+    <!-- display none m space bhi hat jata hai
+     visibility hidden m space rhta hai -->
+
+     <script>
+        const sec=document.getElementById("content");
+        console.log(sec.innerText);
+
+        const divg=document.getElementById("guest").innerText;
+        console.log(divg); //        
+        const divu=document.getElementById("guest").innerHTML;
+        console.log(divu); //show inner html tag
+        const divq=document.getElementById("guest").textContent;
+        console.log(divq); //show hidden text also
+     </script>
+</body>
+</html>
