@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p:first-child{
+            color:red;
+        }
+        p:last-child{
+            color:green;
+        }
+        p:nth-child(4){
+            color:blue;
+        }
+        p:nth-child(odd){
+            color:purple;
+        }
+        p:nth-child(n+2){  /*here n value is zero*/
+            color:rgb(243, 145, 243);
+        }
+        /* : pseudo class 
+        {
+        a:visited{   this is to change the color by default
+            color:purple;   }
+        }
+        :: pseudo element
+        {
+        li::marker{
+            color:orange;
+            content:"@"
+        }
+        }
+        both together
+        li:hover::marker{
+            color:green;
+        }
+        */
+    </style>
+</head>
+<body>
+    <div id="content">
+        <p>This is a paragraph</p>    </div>
+
+        <div id="gallery">
+        </div>
+
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+            <li>Item 6</li> 
+        </ul>
+
+        <div id="parent">
+            <p>Loreum ispum hadh hfhfhrfh fhdfhurbv dshfeh</p>
+            <p>Loreum ispum hadh hfhfhrfh fhdfhurbv dshfeh</p>
+            <p>Loreum ispum hadh hfhfhrfh fhdfhurbv dshfeh</p>
+            <p>Loreum ispum hadh hfhfhrfh fhdfhurbv dshfeh</p>
+            <p>Loreum ispum hadh hfhfhrfh fhdfhurbv dshfeh</p>
+            <p>Loreum ispum hadh hfhfhrfh fhdfhurbv dshfeh</p>
+            <p>Loreum ispum hadh hfhfhrfh fhdfhurbv dshfeh</p>
+        </div>
+
+        <div id="digi-clock"></div>
+    <script>
+        const para = document.createElement("p");
+        para.textContent = "This is a dynamically added paragraph.";
+        console.log(para);
+        document.getElementById("content").appendChild(para);
+        //.appendChild() -> add the element inside the selected element
+        document.querySelector("#content p").remove();
+
+        const image= document.createElement("img");
+        image.setAttribute("src","https://www.pngitem.com/pimgs/m/681-6810582_javascript-logo-svg-hd-png-download.png");
+        image.setAttribute("alt","JavaScript Logo");
+        const gallery= document.getElementById("gallery");
+        gallery.appendChild(image);
+
+        // parentElement
+        // Children
+        // nextElementSibling
+        
+        // let date = new Date();
+        // console.log(date);
+
+        // DIGITAL CLOCK
+        setInterval(()=> {
+            let date = new Date();
+            console.log(date);;
+
+            let hour =date.getHours();
+            let min =date.getMinutes();
+            let sec =date.getSeconds();
+
+            const digiClock = document.getElementById("digi-clock");
+            digiClock.textContent = hour + ":" + min + ":" + sec ;
+            //digiClock.textContent = '${hour} : ${min} : ${sec}';
+        },1000)
+    </script>
+</body>
+</html>
