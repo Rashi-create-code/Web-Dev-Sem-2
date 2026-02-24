@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   
+    <input type="text" id="myinput">
+    <p id="output"></p>
+    <script>
+        // console.log(event)
+        // document.getElementById("output").textContent = "Change
+        // detected!";
+        // }
+
+        document.getElementById("myInput").addEventListener("change", (event) => {
+            // here event is the synthetic event which comes under
+            // addeventlister's callback function. It will print the event object
+            // which stores all information about the form tag.
+            console.log(event.target.value);
+            // event.target will print the targeted element and event.target.
+            // value will print the user input value.
+
+            document.getElementById("output").textContent = "Change detected!";
+        })
+    </script>
+</body>
+
+</html>
